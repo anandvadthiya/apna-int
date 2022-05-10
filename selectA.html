@@ -416,9 +416,9 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="contact-us.html">Contact us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -428,6 +428,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="vision-mission.html">Vision and Mission</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="index.html#pricing">Plans and Pricing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="terms-conditions.html">Terms and Conditions</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="refund-cancellation.html">Refund and Cancellation</a></li>
             </ul>
           </div>
         </div>
@@ -659,12 +660,27 @@
       };
 
 
-      fetch("https://apna-int.herokuapp.com/", requestOptions)
+      fetch("https://apna-mail.herokuapp.com/", requestOptions)
         .then(response => response.text())
         .then(result => {
           // console.log(result);
           const data = result.split(" ")
-          document.getElementById("amount-id").innerHTML = data[0];
+          console.log(data);
+
+          var x = data[0];
+          console.log(x)
+          // x = x.toString();
+          x = Math.trunc(x)
+          x = x.toString();
+          console.log(x)
+          var lastThree = x.substring(x.length-3);
+          var otherNumbers = x.substring(0,x.length-3);
+          if(otherNumbers != '')
+              lastThree = ',' + lastThree;
+          var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+          alert(res);
+
+          document.getElementById("amount-id").innerText = "₹" + res;
           document.getElementById("price").style.display = 'block';
           document.getElementById("pay-now").href = data[1];
           let cal_btn = document.getElementById("cal-btn");
