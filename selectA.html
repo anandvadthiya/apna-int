@@ -678,7 +678,7 @@
           if(otherNumbers != '')
               lastThree = ',' + lastThree;
           var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
-          alert(res);
+          // alert(res);
 
           document.getElementById("amount-id").innerText = "₹" + res;
           document.getElementById("price").style.display = 'block';
