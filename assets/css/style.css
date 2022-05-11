@@ -570,9 +570,6 @@ section {
   padding-bottom: 0px;
 }
 
-.section-bg {
-  /* background-color: #f8fbfe; */
-}
 
 .section-title {
   text-align: center;
@@ -2304,5 +2301,13 @@ Pricing End
   height: 2.5rem;
 }
 
-.card-pricing p {
+
+@media (min-width: 780px) {
+.abt-us-content {
+  padding: 0px 10rem;
+}
+
+.abt-us-content p{
+  text-align: justify;
+  margin-top: 10px;
 }
