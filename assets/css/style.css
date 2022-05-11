@@ -2303,10 +2303,14 @@ Pricing End
 
 
 @media (min-width: 780px) {
-.abt-us-content {
-  padding: 0px 10rem;
-}
+  .abt-us-content {
+    padding: 0px 10rem;
+  }
 
+}
+.abt-us-content {
+  padding: 0px 1rem;
+}
 .abt-us-content p{
   text-align: justify;
   margin-top: 10px;
