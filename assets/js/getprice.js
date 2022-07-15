@@ -1,7 +1,7 @@
 // array of items , plan, property type
 function priceOf(array, _from_url, property_type){
     // alert("test")
-    let prices = {"bp": 3000, "ms": 1000, "rcm": 1000, "sk": 2500, "wlk": 3500, "ri": 3000, "rv": 20000, "pd": 2299, "pdm": 3000, "hw": 899, "lam": 1800, "oss": 2000, "ds": 13999, "dd": 15999, "fs": 1500, "pc": 899, "en": 2500, "ltc": 1699} 
+    let prices = {"bp": 899, "ms": 1000, "rcm": 1000, "sk": 2500, "wlk": 4499, "ri": 3000, "rv": 20000, "pd": 2299, "pdm": 3000, "hw": 899, "lam": 1800, "oss": 2000, "ds": 13999, "dd": 15999, "fs": 1500, "pc": 899, "en": 2500, "ltc": 2499} 
     let base_price = 0
     let amount = 0
 
